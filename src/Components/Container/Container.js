@@ -27,12 +27,12 @@ const Container = (props) => {
             <div className = "row g-2">
                 <div className = "col-8 bg-secondary">
                     <div className='row align-items-stretch'>
-                        {foods.map(food => <Food key = {food.id} food = {food} eventHandler = {addToCart}></Food>)}
+                        {foods.map(food => <Food key = {food.id} food = {food} eventHandler = {addToCart} ></Food>)}
                     </div>
                     
                 </div>
                 <div className = "col-4 bg-dark">
-                    <Cart foodsInCart = {foodsInCart}></Cart>
+                    <Cart foodsInCart = {foodsInCart} setFoodsInCart = {setFoodsInCart}></Cart>
                 </div>
             </div>
             
