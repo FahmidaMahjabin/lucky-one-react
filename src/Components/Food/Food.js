@@ -5,22 +5,11 @@ import { useState } from 'react';
 import CartItem from '../CartItem/CartItem';
 const Food = (props) => {
     // console.log("props in Food component", props);
-    const {food} = props;
+    const {food, eventHandler} = props;
     const {name, picture, location, balance} = food;
-    const [foodsInCart, setFoodsInCart] = useState([]);
     
-    const addToCart = (food) =>{
-        console.log("food in addToCart:", food);
-        // const newFoodList = [...foodsInCart, food]
-        // console.log("newFoodList:", newFoodList)
-        // setFoodsInCart(newFoodList)
-        // console.log("foodsInChart:",foodsInCart)
-
-        // foodsInCart.map(food => <CartItem key = {food.id} food = {food}></CartItem> )
-        <CartItem food = {food}></CartItem>
-
-
-    }
+    
+    
     return (
         <div className = "col-12 col-lg-4">
             <div className="card">
@@ -31,7 +20,7 @@ const Food = (props) => {
                         <br></br>
                         Location: {location}
                     </p>
-                    <button href="#" className="btn btn-warning  w-100" onClick={() => addToCart(food)}>
+                    <button href="#" className="btn btn-warning  w-100" onClick={() => eventHandler(food)}>
                     <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon> Add To Cart</button>
                 </div>
             </div>

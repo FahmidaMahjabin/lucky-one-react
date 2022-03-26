@@ -3,7 +3,7 @@ import CartItem from '../CartItem/CartItem';
 
 const Cart = (props) => {
     
-    const {foodsInCart} = props.foodsInCart;
+    const {foodsInCart} = props;
     console.log("foodsInCart in Cart", foodsInCart)
     
     return (
