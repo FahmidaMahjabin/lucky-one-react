@@ -22,12 +22,12 @@ const Cart = (props) => {
                     foodsInCart.map(food => <CartItem food = {food} foodsInCart = {foodsInCart} setFoodsInCart = {setFoodsInCart}></CartItem>)
                 }
             </div>
-            <button class = "btn btn-light m-5" onClick={() =>{
+            <button class = "btn btn-light m-2 " onClick={() =>{
                 let emptyCart = [];
                 setFoodsInCart(emptyCart)
             }}>Clear All</button>
 
-            <button class = "btn btn-danger m-5" onClick = {getLuckyDish}>Get Lucky Dish</button>
+            <button class = "btn btn-danger m-2 " onClick = {getLuckyDish}>Get Lucky Dish</button>
             
             {/* {
                 for(let food of foodsInCart){
