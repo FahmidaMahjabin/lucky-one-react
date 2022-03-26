@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import CartItem from '../CartItem/CartItem';
 const Food = (props) => {
     // console.log("props in Food component", props);
     const {food} = props;
@@ -9,13 +10,14 @@ const Food = (props) => {
     const [foodsInCart, setFoodsInCart] = useState([]);
     
     const addToCart = (food) =>{
-        // console.log("food in addToCart:", food)
-        const newFoodList = [...foodsInCart, food]
+        console.log("food in addToCart:", food);
+        // const newFoodList = [...foodsInCart, food]
         // console.log("newFoodList:", newFoodList)
-        setFoodsInCart(newFoodList)
-        console.log("foodsInChart:",foodsInCart)
+        // setFoodsInCart(newFoodList)
+        // console.log("foodsInChart:",foodsInCart)
+
         // foodsInCart.map(food => <CartItem key = {food.id} food = {food}></CartItem> )
-        
+        <CartItem food = {food}></CartItem>
 
 
     }

@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const CartItem = (props) => {
-    console.log("props in cart item:", props)
-    const {picture, name} = props;
+    console.log("props in cart item:", props.food)
+    const {picture, name} = props.food;
     return (
         <div className='row'>
             <div className='col'>{picture}</div>
